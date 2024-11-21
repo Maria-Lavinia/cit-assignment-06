@@ -1,12 +1,18 @@
 .layout {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
+    display: flex;
+    flex-direction: column;
     margin: 20px auto;
     max-width: 800px;
     box-shadow: 0 2px 3px #ccc;
     border: 1px solid #eee;
     padding: 16px;
     text-align: left;
+}
 
+.images-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    width: 100%;
+    max-width: 400px;
+    gap: 1rem;
 }

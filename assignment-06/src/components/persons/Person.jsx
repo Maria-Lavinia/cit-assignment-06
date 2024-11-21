@@ -3,11 +3,10 @@ import Image from '../images/Image';
 
 function Person({person, images}){
     return(
-        <div className={style['layout']}>
-        {person && person.known_for_department  }
-        {person && person.original_name }
-        {person && person.id }
+   <>
 
+        <div className={style['layout']}>
+        {person && person.original_name } - {person && person.known_for_department  }
         {person && person.known_for.map((movie, index) => (
             <div key={index}>
                 <p>{movie.title}</p>
@@ -16,10 +15,12 @@ function Person({person, images}){
 
             </div>
         ))}
-
-   <Image images={images} />
-
+        
+        <div className={style["images-layout"]}>
+         <Image images={images} />
         </div>
+        </div>
+        </>
     )
 
 

@@ -40,7 +40,6 @@ if (selectedPerson){
   const handleClick = (n) => {
     setSelectedPerson(data[n]);
     setSelectedIndex(n);
-    console.log(n);
   };
 
   return (
@@ -48,7 +47,7 @@ if (selectedPerson){
       <Person person={selectedPerson} images={images} />
 
 
-
+  <div className={"layout"}>
       <button onClick={() => handleClick(showIndex[0])}>
         {showIndex[0] + 1}
       </button>
@@ -117,7 +116,7 @@ if (selectedPerson){
       </button>
       )}
 
-
+  </div>
     </>
   );
 }
